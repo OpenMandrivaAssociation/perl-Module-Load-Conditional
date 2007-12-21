@@ -18,6 +18,7 @@ Buildrequires:	perl(Module::Load)
 Buildrequires:	perl(Params::Check)
 Buildrequires:	perl-version
 Buildarch:	    noarch
+BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 Module::Load::Conditional provides simple ways to query and possibly load any

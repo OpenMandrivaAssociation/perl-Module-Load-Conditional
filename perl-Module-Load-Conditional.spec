@@ -1,7 +1,7 @@
 %define	module	Module-Load-Conditional
 %define	name	perl-%{module}
-%define	version	0.26
-%define	release	%mkrel 4
+%define	version	0.28
+%define	release	%mkrel 1
 
 Name:		    %{name}
 Version:	    %{version}

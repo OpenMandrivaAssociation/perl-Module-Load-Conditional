@@ -1,16 +1,16 @@
-%define	module	Module-Load-Conditional
-%define	name	perl-%{module}
-%define	version	0.30
-%define	release	%mkrel 1
+%define	upstream_name	 Module-Load-Conditional
+%define	upstream_version 0.30
 
-Name:		    %{name}
-Version:	    %{version}
-Release:	    %{release}
-Summary:	    Looking up module information / loading at runtime
-License:	    GPL or Artistic
-Group:		    Development/Perl
-Url:		    http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Module/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	Looking up module information / loading at runtime
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel
 %endif
@@ -18,7 +18,7 @@ Buildrequires:	perl(Module::Load)
 Buildrequires:	perl(Params::Check)
 Buildrequires:	perl-version
 Buildarch:	    noarch
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
+BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Module::Load::Conditional provides simple ways to query and possibly load any
@@ -31,7 +31,7 @@ It allows you to fetch any file pointed to by a ftp, http, file, or rsync uri
 by a number of different means.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -52,5 +52,3 @@ rm -rf %{buildroot}
 %doc README
 %{perl_vendorlib}/Module
 %{_mandir}/*/*
-
-

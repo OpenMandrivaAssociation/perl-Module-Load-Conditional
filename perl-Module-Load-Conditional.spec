@@ -1,5 +1,5 @@
 %define	upstream_name	 Module-Load-Conditional
-%define	upstream_version 0.30
+%define upstream_version 0.34
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Looking up module information / loading at runtime
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
 
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel

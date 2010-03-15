@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	Looking up module information / loading at runtime
 License:	GPL+ or Artistic
@@ -16,7 +16,8 @@ Buildrequires:	perl-devel
 %endif
 Buildrequires:	perl(Module::Load)
 Buildrequires:	perl(Params::Check)
-Buildrequires:	perl-version
+Buildrequires:	perl(version)
+
 Buildarch:	    noarch
 BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -38,7 +39,7 @@ by a number of different means.
 %make
 
 %check
-%{__make} test
+%make test
 
 %install
 rm -rf %{buildroot}

@@ -1,9 +1,9 @@
 %define	upstream_name	 Module-Load-Conditional
-%define upstream_version 0.38
+%define upstream_version 0.40
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 Summary:	Looking up module information / loading at runtime
 License:	GPL+ or Artistic

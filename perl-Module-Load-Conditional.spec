@@ -1,9 +1,9 @@
 %define	upstream_name	 Module-Load-Conditional
-%define upstream_version 0.44
+%define upstream_version 0.46
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    1
 
 Summary:	Looking up module information / loading at runtime
 License:	GPL+ or Artistic
@@ -19,7 +19,6 @@ Buildrequires:	perl(Params::Check)
 Buildrequires:	perl(version)
 
 Buildarch:	    noarch
-BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Module::Load::Conditional provides simple ways to query and possibly load any
@@ -42,14 +41,9 @@ by a number of different means.
 %make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean 
-rm -rf %{buildroot}
-
 %files 
-%defattr(-,root,root)
 %doc README
 %{perl_vendorlib}/Module
 %{_mandir}/*/*

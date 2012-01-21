@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    2
+Release:    3
 
 Summary:	Looking up module information / loading at runtime
 License:	GPL+ or Artistic
@@ -11,9 +11,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
 
-%if %{mdkversion} < 1010
 Buildrequires:	perl-devel
-%endif
 Buildrequires:	perl(Module::Load)
 Buildrequires:	perl(Params::Check)
 Buildrequires:	perl(version)

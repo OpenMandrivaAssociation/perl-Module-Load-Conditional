@@ -1,14 +1,14 @@
 %define	modname	Module-Load-Conditional
-%define modver 0.58
+%define modver 0.62
 
 Summary:	Looking up module information / loading at runtime
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	4
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Module/Module-Load-Conditional-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
 Buildarch:	noarch
 Buildrequires:	perl-devel
 Buildrequires:	perl(Module::Load)
@@ -42,5 +42,3 @@ by a number of different means.
 %doc README
 %{perl_vendorlib}/Module
 %{_mandir}/man3/*
-
-

@@ -1,10 +1,10 @@
 %define	modname	Module-Load-Conditional
-%define modver 0.62
+%define modver 0.64
 
 Summary:	Looking up module information / loading at runtime
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -29,7 +29,7 @@ by a number of different means.
 %setup -qn %{modname}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check

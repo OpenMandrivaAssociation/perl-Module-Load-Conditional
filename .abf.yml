@@ -1,5 +1,2 @@
-removed_sources:
-  Module-Load-Conditional-0.46.tar.gz: 1dd6f7ff16d7b2fc1da1bee9eab8f1bec7375947
-  Module-Load-Conditional-0.58.tar.gz: 721df93ff2a03022569520aee71dbc13191d850f
 sources:
-  Module-Load-Conditional-0.62.tar.gz: 3e208af28c32bcb9c9e6b47c3730ab3d8eb8f77d
+  Module-Load-Conditional-0.68.tar.gz: 30d10bfde68b8dcefc0368fa72ea4558ddaddf5e
